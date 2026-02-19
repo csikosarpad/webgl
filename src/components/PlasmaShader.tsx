@@ -1,4 +1,4 @@
-import { useWebGL } from '../hooks/useWebGL';
+import { useWebGL } from '@hooks/useWebGL';
 
 const vertexShader = `
   attribute vec2 aPos;
@@ -37,15 +37,15 @@ const fragmentShader = `
 `;
 
 export default function PlasmaShader() {
-    const canvasRef = useWebGL({
-        vertexShader,
-        fragmentShader,
-    });
+  const canvasRef = useWebGL({
+    vertexShader,
+    fragmentShader,
+  });
 
-    return (
-        <canvas
-            ref={canvasRef}
-            className="w-full h-full block"
-        />
-    );
+  return (
+    <canvas
+      ref={canvasRef}
+      className="w-full h-full block"
+    />
+  );
 }

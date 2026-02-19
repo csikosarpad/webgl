@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import JuliaFractal from './components/JuliaFractal';
-import PlasmaShader from './components/PlasmaShader';
+import JuliaFractal from '@components/JuliaFractal';
+import PlasmaShader from '@components/PlasmaShader';
 
 type DemoType = 'julia' | 'plasma';
 
@@ -44,6 +44,8 @@ export default function App() {
                 {showMenu ? '✕ Menü elrejtése' : '☰ Menü'}
             </button>
 
+            {/* WebGL Canvas */}
+            <DemoComponent />
 
             {/* Demo Info */}
             <div className="absolute top-4 right-4 z-10 bg-black/50 text-white px-4 py-2 rounded-lg backdrop-blur-sm">
@@ -68,9 +70,6 @@ export default function App() {
                     ))}
                 </div>
             )}
-
-            {/* WebGL Canvas */}
-            <DemoComponent />
 
         </div>
     );
